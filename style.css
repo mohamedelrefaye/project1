@@ -1,0 +1,277 @@
+/* poppins-regular - latin */
+@font-face {
+    font-family: 'Poppins'sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/poppins-v20-latin-regular.eot'); /* IE9 Compat Modes */
+    src: local(''),
+         url('../fonts/poppins-v20-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/poppins-v20-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/poppins-v20-latin-regular.woff') format('woff'), /* Modern Browsers */
+         url('../fonts/poppins-v20-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/poppins-v20-latin-regular.svg#Poppins') format('svg'); /* Legacy iOS */
+  }
+
+ * 
+ {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   scroll-behavior: smooth;
+
+ }
+ body {
+  min-height: 100vh;
+  background: linear-gradient(45deg,#ff216d,#2196f3);
+ }
+ .navigation{
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  height: 20px;
+  width: 250px;
+  z-index: 100;
+
+ }
+ .toggle 
+ {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  color: #ff216d;
+  padding: 5px 20px;
+
+
+ }
+ .toggle::before
+ {
+  content: 'menu';
+  margin-right: 10px;
+
+ }
+ .toggle.active::before
+ {
+  content: 'close';
+ }
+
+ .toggle span
+ {
+  position: relative;
+  width: 20px;
+  height: 50px;
+ }
+ .toggle span::before
+ {
+  content: '';
+  position: absolute;
+  top: 20px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #ff216d;
+  transition: 0.5s;
+   }
+
+   .toggle span::after
+   {
+    content: '';
+    position: absolute;
+    bottom:  20px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #ff216d;
+    transition: 0.5s;
+     }
+     .toggle.active span::before
+ {
+  transform: rotate(225deg);
+  top: 24px;
+ }
+ .toggle.active span::after
+ {
+  transform: rotate(135deg);
+  bottom: 24px;
+
+ }
+
+ ul 
+ {
+  position: relative;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+
+ }
+
+ ul li 
+ {
+  position: relative;
+  list-style: none;
+  transition: 0.5s;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateX(-250px);
+  transition-delay: calc(0.1s * var(--i));
+   }
+  
+   ul li a
+   {
+    position: relative;
+    text-decoration: none;
+    display: block;
+    padding: 10px 20px;
+    height: 50px;
+    background: #fff;
+    color: #333;
+    transition: 0.5s;
+
+   }
+
+   ul li a:hover
+   {
+    background: #f6f6f6;
+    color: #ff216d;
+    transition: 0s;
+
+
+   }
+
+ .navigation.active ul li 
+ 
+ {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0px);
+
+
+ }
+ {
+
+
+ }
+
+ .headerpage {
+    background-color: #fff;
+    width: 100%;
+    position: absolute;
+    z-index: 9999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 200px;
+    
+ }
+ .logo {
+   text-decoration: none;
+   color: hsl(224, 94%, 46%);
+   text-transform:uppercase ;
+   font-weight: 700;
+   font-size: 1.5em;
+
+ }
+ .logo:hover {
+  color: rgba(235, 8, 84, 0.8) ;
+  border-bottom:  2px solid blue;
+
+ }
+ .navigation a {
+   color: hsl(224, 94%, 46%);
+   text-decoration: none;
+   font-size: 1.1em;
+   font-weight: 500;
+   padding-left: 30px;
+
+ }
+
+ .navigation a:hover {
+  color: rgba(235, 8, 84, 0.8) ;
+
+ }
+
+ section {
+  padding: 100px 200px;
+
+ }
+ 
+ .main {
+
+  width: 100%;
+  min-height: 100vh;
+  display: flex;  
+  align-items: center;
+
+
+  }
+  .main h2 {
+
+    color: #fff;
+    font-size: 1.6em;
+    letter-spacing: 1px;
+
+
+  }
+  .main h2 span {
+  
+    display: inline-block;
+    margin-top: 10px;
+    color: #24043d;
+    font-size: 1.8em;
+    font-weight 30px;
+
+  }
+  .main h3{
+    color: #fff;
+    font-size: 1.5em;
+    font-weight: 200px;
+    letter-spacing: 1px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+
+  }
+  .main-buton{
+    color: #24043d;
+    background-color: #378ffc;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.1em;
+    font-weight: 600;
+    display:inline-block;
+    padding: 0.9375em 2.1875em;
+    letter-spacing: 1px;
+    border-radius: 15px;
+    margin-bottom: 40px;
+    transition: 0.7s ease;
+  }  
+  .main-buton:hover {
+   background-color: #fff;
+   transform :scale(1.1);
+   transition: 0.5s;
+  
+  }
+ 
+  .social-icon a {
+    display:inline-block;
+    color: rgb(255, 255, 255);
+    font-size: 1.8em;
+    text-align: center;
+    padding-left: 10px;
+    
+    
+   
+    
+    
+
+  }
+  .social-icon a:hover{
+    color: rgba(84, 57, 235, 0.8);
+    transition: 0.5s;
+
+    
+  }
